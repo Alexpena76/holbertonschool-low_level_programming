@@ -2,6 +2,13 @@
 #include <time.h>
 #include <stdio.h>
 
+/**
+ * _abs - Give an absolute value of a number
+ * @n: The number to be evaluated
+ *
+ * Return: -n if the number is negative. n otherwise
+ */
+
 int _abs(int n)
 {
 

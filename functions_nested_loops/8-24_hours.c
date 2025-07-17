@@ -1,5 +1,9 @@
 #include "main.h"
 
+/**
+ * jack_bauer - Prints every hour and minute possible
+ */
+
 void jack_bauer(void)
 {
 

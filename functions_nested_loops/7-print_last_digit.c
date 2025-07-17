@@ -1,5 +1,12 @@
 #include "main.h"
 
+/**
+ * print_last_digit - Print the last digit of a number
+ * @a: The number to be checked
+ *
+ * Return: Result
+ */
+
 int print_last_digit(int a)
 {
 

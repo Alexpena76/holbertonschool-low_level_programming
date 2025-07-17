@@ -1,5 +1,12 @@
 #include "main.h"
 
+/**
+ * _isalpha - Check if a number is a letter
+ * @c: The letter to be checked
+ *
+ * Return: 1 if letter. 0 otherwise
+ */
+
 int _isalpha(int c)
 {
 

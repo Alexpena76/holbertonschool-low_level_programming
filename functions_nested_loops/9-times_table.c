@@ -1,5 +1,9 @@
 #include "main.h"
 
+/**
+ * times_table - Prints the times table excluding 10
+ */
+
 void times_table(void)
 {
 	int i;
