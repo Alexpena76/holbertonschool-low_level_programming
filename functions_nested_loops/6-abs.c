@@ -2,17 +2,18 @@
 #include <time.h>
 #include <stdio.h>
 
-int _abs(int){
+int _abs(int n)
+{
 
-    int n;
+	if (n < 0)
+	{
+		return (-n);
+	}
+	else
+	{
+		return (n);
+	}
 
-    if(n < 0){
-        n * -1;
-    }
-    else{
-        n * 1;
-    }
 
-
-    return(0);
+	return (0);
 }

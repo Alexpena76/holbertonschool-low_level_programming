@@ -1,26 +1,25 @@
-#include <stdlib.h>
-#include <time.h>
-#include <stdio.h>
+#include "main.h"
 
-int print_last_digit(int){
+int print_last_digit(int a)
+{
 
    
-    int a;
+	int b;
 
-    int b;
+	int c;
 
-    int c;
+	b = a % 10;
 
-    b = a % 10;
+	if (b < 0)
+	{
+		c = b * -1;
+	}
+	else
+	{
+		c = b * 1;
+	}
 
-    if(b < 0){
-        c = b * -1;
-    }
-    else{
-        c = b * 1;
-    }
+	_putchar(c + 48);
 
-    _putchar(c);
-
-    return(0);
+	return (c);
 }
