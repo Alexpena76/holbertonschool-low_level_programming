@@ -11,9 +11,10 @@ struct usuario
     int contraseña;
 };
 
-void nueva_funcion(struct usuario n)
+void nueva_funcion(struct usuario *n)
 {
-    printf("%s\n", n.hobby); 
+    // Se usa una flecha para ver el valor de un puntero de tipo objeto
+    n -> id += 1;
 }
 
 int main()
@@ -31,9 +32,12 @@ int main()
 
     // printf("%d", ptr -> id);
 
-    nueva_funcion(persona1);
+    nueva_funcion(&persona1);
+
+    printf("%d", persona1.id);
 
     return(0);
 }
 
+// La flecha se usa para apuntar hacia el valor de una direccion de memoria de una struct
 
