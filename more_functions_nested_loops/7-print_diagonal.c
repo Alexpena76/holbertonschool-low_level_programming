@@ -1,7 +1,10 @@
 #include "main.h"
 
 /**
- * print_diagonal - Prints diagonal slashed diagonally
+ * print_diagonal - Prints diagonal slashes line by line
+ * @n: The number of rows
+ *
+ * Return: void function
  */
 
 void print_diagonal(int n)
