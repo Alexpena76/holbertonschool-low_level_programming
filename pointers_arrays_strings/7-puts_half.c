@@ -30,8 +30,9 @@ int _strlen(char *s)
 void puts_half(char *str)
 {
     int i;
+    int j = _strlen(str);
 
-    for (i = _strlen(str)/2; i <= _strlen(str); i++)
+    for (i = j/2; i < j; i++)
     {
         if(str[i] != '\0')
         {
