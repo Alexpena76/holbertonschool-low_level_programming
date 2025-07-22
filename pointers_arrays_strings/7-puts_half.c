@@ -21,7 +21,7 @@ int _strlen(char *s)
 }
 
 /**
- * _putshalf - gives half of a string
+ * puts_half - gives half of a string
  * @str: string
  *
  * Return: void function
@@ -29,20 +29,20 @@ int _strlen(char *s)
 
 void puts_half(char *str)
 {
-    int i;
-    int j = _strlen(str);
+	int i;
+	int j = _strlen(str);
 
-    if (j % 2 > 0)
-    {
-        j = _strlen(str) + 1;
-    }
+	if (j % 2 > 0)
+	{
+		j = _strlen(str) + 1;
+	}
 
-    for (i = j/2; i < j; i++)
-    {
-        if(str[i] != '\0')
-        {
-            _putchar(str[i]);
-        }
-    }
-    _putchar('\n');
+	for (i = j / 2; i < j; i++)
+	{
+		if (str[i] != '\0')
+		{
+			_putchar(str[i]);
+		}
+	}
+	_putchar('\n');
 }
