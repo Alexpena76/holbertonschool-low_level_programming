@@ -1,24 +1,38 @@
 #include <unistd.h>
 #include "main.h"
 
+/**
+ * _strlen - gives the length of a string
+ * @s: string
+ *
+ * Return: the length of the string
+ */
+
 int _strlen(char *s)
 {
-    int contador = 0;
+	int counter = 0;
 
-    while (s[contador] != '\0')
-    {
-        contador++;
-    }
-    return(contador);
+	while (s[counter] != '\0')
+	{
+		counter++;
+	}
+	return (counter);
 }
+
+/**
+ * _puts - Prints a string
+ * @str: Variable to be printed
+ *
+ * Return: Void function
+ */
 
 void _puts(char *str)
 {
-    int n;
+	int n;
 
-    n = _strlen(str);
+	n = _strlen(str);
 
-    write(1, str, n);
+	write(1, str, n);
 
-    _putchar('\n');
+	_putchar('\n');
 }
