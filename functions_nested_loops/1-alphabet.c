@@ -3,11 +3,17 @@
 #include <stdio.h>
 #include "1.h"
 
-void print_alphabet(void){
-    char i;
+/**
+ * print_alphabet - Prints the alphabet
+ */
 
-    for(i = 'a'; i <= 'z'; i++){
-        _putchar(i);
-    }
-    _putchar('\n');
+void print_alphabet(void)
+{
+	char i;
+
+	for (i = 'a'; i <= 'z'; i++)
+	{
+		_putchar(i);
+	}
+	_putchar('\n');
 }
