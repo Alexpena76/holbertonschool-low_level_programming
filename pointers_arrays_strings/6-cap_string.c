@@ -1,5 +1,13 @@
 #include "main.h"
 
+/**
+ * cap_string - Capitalizes all words of a string
+ * @s: The string to be checked
+ *
+ * Return: Capitalized string
+ */
+
+
 char *cap_string(char *s)
 {
 	int i = 0;
