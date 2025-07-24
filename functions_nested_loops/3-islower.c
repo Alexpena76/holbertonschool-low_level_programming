@@ -2,13 +2,23 @@
 #include <time.h>
 #include <stdio.h>
 
-int _islower(int c){
-    char c;
+/**
+ * _islower - Check if a letter is lowercase
+ * @c: The letter to be checked
+ *
+ * Return: 1 if the letter is lowercase. 0 otherwise
+ */
 
-    if(c >= 'a' && c <= 'z'){
-        return(1);
-    }
-    else{
-        return(0);
-    }
+int _islower(int c)
+{
+	char c;
+
+	if (c >= 'a' && c <= 'z')
+	{
+		return (1);
+	}
+	else
+	{
+		return (0);
+	}
 }
