@@ -2,8 +2,8 @@
 
 /**
  * _pow_recursion - Gives the first operand to the power of the second
- * @arg1: Number to be exponentialized
- * @arg2: Exponentialization number
+ * @x: Number to be exponentialized
+ * @y: Exponentialization number
  *
  * Return: Recursion
  */
@@ -20,5 +20,5 @@ int _pow_recursion(int x, int y)
 		return (1);
 	}
 
-	return x * _pow_recursion(x, y - 1);
+	return (x * _pow_recursion(x, y - 1));
 }
