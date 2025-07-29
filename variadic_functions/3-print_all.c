@@ -16,72 +16,49 @@
 
 void print_all(const char * const format, ...)
 {
-	va_list args;
-	int i = 0;
-	char *separator = "";
-	char current_char;
-	char char_arg;
-	int int_arg;
-	float float_arg;
-	char *string_arg;
+    va_list args;
+    int i = 0;
+    char *separator = "";
+    char current_char;
+    char *string_arg;
+    char types[] = "cifs";
+    int j;
 
-	va_start(args, format);
+    va_start(args, format);
 
-	while (format != NULL && format[i] != '\0')  
-	{
-		current_char = format[i];
+    // WHILE LOOP #1: Main format string loop
+    while (format != NULL && format[i] != '\0')
+    {
+        current_char = format[i];
+        j = 0;
 
-		
-		if (current_char == 'c' || current_char == 'i' || current_char == 'f' || current_char == 's')
-		{
-			printf("%s", separator);
+        // WHILE LOOP #2: Check if current_char matches any valid type
+        while (types[j] != '\0')
+        {
+            // IF #1: Found a matching valid type
+            if (current_char == types[j])
+            {
+                printf("%s", separator);
+                
+                // Handle each type using the same j index
+                j == 0 && printf("%c", va_arg(args, int));
+                j == 1 && printf("%d", va_arg(args, int));  
+                j == 2 && printf("%f", va_arg(args, double));
+                j == 3 && (string_arg = va_arg(args, char*)) && 
+                    // IF #2: Handle NULL string
+                    (string_arg == NULL && printf("(nil)")) + 
+                    (string_arg != NULL && printf("%s", string_arg));
+                
+                separator = ", ";
+                break;
+            }
+            j++;
+        }
 
-			while (1)
-			{
-				
-				while (current_char == 'c')
-				{
-					char_arg = va_arg(args, int);
-					printf("%c", char_arg);
-					break;
-				}
+        i++;
+    }
 
-				while (current_char == 'i')
-				{
-					int_arg = va_arg(args, int);
-					printf("%d", int_arg);
-					break;
-				}
-
-				while (current_char == 'f')
-				{
-					float_arg = va_arg(args, double);
-					printf("%f", float_arg);
-					break;
-				}
-
-				while (current_char == 's')
-				{
-					string_arg = va_arg(args, char*);
-					
-					if (string_arg == NULL)
-						printf("(nil)");
-					while (string_arg != NULL)  
-					{
-						printf("%s", string_arg);
-						break;
-					}
-					break;
-				}
-				break;  
-			}
-
-			separator = ", ";
-		}
-
-		i++;
-	}
-
-	va_end(args);
-	printf("\n");
+    va_end(args);
+    printf("\n");
 }
+
