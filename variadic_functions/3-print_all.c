@@ -27,18 +27,18 @@ void print_all(const char * const format, ...)
 
 	va_start(args, format);
 
-	while (format != NULL && format[i] != '\0')  // Remove NULL check if
+	while (format != NULL && format[i] != '\0')  
 	{
 		current_char = format[i];
 
-		// IF #1: Check if valid type
+		
 		if (current_char == 'c' || current_char == 'i' || current_char == 'f' || current_char == 's')
 		{
 			printf("%s", separator);
 
 			while (1)
 			{
-				// Use switch-like logic with while/break instead of multiple ifs
+				
 				while (current_char == 'c')
 				{
 					char_arg = va_arg(args, int);
@@ -63,17 +63,17 @@ void print_all(const char * const format, ...)
 				while (current_char == 's')
 				{
 					string_arg = va_arg(args, char*);
-					// IF #2: Handle NULL string
+					
 					if (string_arg == NULL)
 						printf("(nil)");
-					while (string_arg != NULL)  // Use while instead of if
+					while (string_arg != NULL)  
 					{
 						printf("%s", string_arg);
 						break;
 					}
 					break;
 				}
-				break;  // Exit the outer while(1)
+				break;  
 			}
 
 			separator = ", ";
